@@ -343,6 +343,7 @@ This document outlines the process for creating a new module in the Acela framew
 Location:
 Modify the bootstrap.php file to include new routes for the module.
 Code Example:
+```
 /**
  * site notes
  */
@@ -352,7 +353,7 @@ Core\Route::create('any', $basePath . '/add',                         [ $control
 Core\Route::create('any', $basePath . '/([0-9]+)/(view|edit|delete)', [ $controller, 'editItem' ],  'admin');
 Core\Route::create('any', $basePath . '(/?)',                         [ $controller, 'listItems' ], 'admin');
 
-
+```
 ## Step 4: Create Related View Files
 
 1. **Location**:
